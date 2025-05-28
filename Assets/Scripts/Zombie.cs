@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    protected int health = 100; // Здоровье зомби - защищенное поле
+    private int health = 100; 
 
+    //Публичное свойство для чтения здоровья
+    public int Health
+    {
+        get { return health; }
+    }
     //Базовый метод движения
     public virtual void Move()
     {

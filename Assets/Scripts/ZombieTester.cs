@@ -11,12 +11,13 @@ public class ZombieTester : MonoBehaviour
         {
             z.Move();
         }
-        //// Находим зомби в сцене
-        //zombieRef = FindObjectOfType<Zombie>();
+        // Находим зомби в сцене
+        zombieRef = FindObjectOfType<Zombie>();
 
         ////Вызываем методы зомби
         //zombieRef.Move();
         //zombieRef.TakeDamage(20);
+        Debug.Log("Zombie health is: " + zombieRef.Health);
     }
 
     // Update is called once per frame
