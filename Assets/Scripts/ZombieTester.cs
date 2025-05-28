@@ -6,12 +6,17 @@ public class ZombieTester : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Находим зомби в сцене
-        zombieRef = FindObjectOfType<Zombie>();
+        var zombies = FindObjectsOfType<Zombie>();
+        foreach (var z in zombies)
+        {
+            z.Move();
+        }
+        //// Находим зомби в сцене
+        //zombieRef = FindObjectOfType<Zombie>();
 
-        //Вызываем методы зомби
-        zombieRef.Move();
-        zombieRef.TakeDamage(20);
+        ////Вызываем методы зомби
+        //zombieRef.Move();
+        //zombieRef.TakeDamage(20);
     }
 
     // Update is called once per frame
